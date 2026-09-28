@@ -1,0 +1,52 @@
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const form =
+            document.getElementById(
+                "comicForm"
+            );
+
+        const button =
+            document.getElementById(
+                "generateButton"
+            );
+
+        const buttonText =
+            document.getElementById(
+                "buttonText"
+            );
+
+        const loadingText =
+            document.getElementById(
+                "loadingText"
+            );
+
+
+        if (!form) {
+            return;
+        }
+
+
+        form.addEventListener(
+            "submit",
+            () => {
+
+                button.disabled = true;
+
+                buttonText.classList.add(
+                    "hidden"
+                );
+
+                loadingText.classList.remove(
+                    "hidden"
+                );
+
+                button.style.opacity =
+                    "0.75";
+
+            }
+        );
+
+    }
+);
